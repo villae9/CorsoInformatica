@@ -4,6 +4,10 @@
      
      private $email;
     
-     public function getEmail() {}
-     public function setEmail($email) {}
+     public function getEmail() {
+         return $this->email;
+     }
+     public function setEmail($email) {
+          $this->email = $email;
+     }
  }
