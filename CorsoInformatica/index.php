@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,7 +7,14 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-       echo "Hello World!";
+      
+          require_once 'Student.php';
+          $studente1 = new Student("Elisa",20,'ggg@gfg');
+          $studente2 = new Student("Diana",21,'hhh@gfg');
+          $studente3 = new Student("Marco",22,'kkk@gfg');
+          var_dump($studente1);
+          var_dump($studente2);
+          var_dump($studente3);
         ?>
     </body>
 </html>
