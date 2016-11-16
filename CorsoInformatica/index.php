@@ -7,6 +7,8 @@
         });
         use Users\Student;
         use Users\Course as Course;
+        use Users\Teacher;
+        use Users\School;
 ?>
 <!DOCTYPE html>
 
@@ -29,9 +31,28 @@
           $Corso1 = new Course("Matematica", 18);
           $Corso2 = new Course("Fisiologia", 15);
           
+          $scuola1 = new School('Wylab');
+          
           $studente2->addCourse($Corso1);
+          $studente3->addCourse($Corso1);
+          $studente1->addCourse($Corso2);
+          
+          $scuola1->addStudent($studente1);
+          $scuola1->addStudent($studente2);
+          $scuola1->addStudent($studente3);
           echo $studente2;
           
+          $insegnante1 = new Teacher("Fazio",30,'aaa@kk');
+          $insegnante2 = new Teacher("Roberto",31,'ttt@kk');
+          
+          $insegnante1->setCourse($Corso1);
+         
+          $insegnante2->setCourse($Corso2);
+          
+          $insegnante1->mostraSuoiAlunni();
+          
+          
+         
         ?>
     </body>
 </html>
