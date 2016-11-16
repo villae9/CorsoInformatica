@@ -1,4 +1,5 @@
 <?php
+namespace Users;
 
 class Course {
     private $name;
@@ -9,6 +10,6 @@ class Course {
         $this->hours = $hours;
     }
     public function __toString (){
-        return "Corso: $this->name Orario: $this->hours";
+        return "Corsi: $this->name Orario: $this->hours";
     }
 }

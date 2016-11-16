@@ -1,3 +1,13 @@
+<?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+
+        spl_autoload_register(function($class_name){
+            require_once $class_name.".php";  
+        });
+        use Users\Student;
+        use Users\Course as Course;
+?>
 <!DOCTYPE html>
 
 <html>
@@ -6,11 +16,7 @@
         <title></title>
     </head>
     <body>
-        <?php
-      
-          require_once 'classes/Student.php';
-          require_once 'classes/Course.php';
-          
+<?php
           $studente1 = new Student("Elisa",20,'ggg@gfg');
           $studente2 = new Student("Diana",21,'hhh@gfg');
           $studente3 = new Student("Marco",22,'kkk@gfg');

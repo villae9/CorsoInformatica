@@ -1,7 +1,8 @@
 <?php
 
-require_once 'Person.php';
-require_once 'DigitalUser.php';
+namespace Users;
+//require_once 'Person.php';
+//require_once 'DigitalUser.php';
 
 class Student implements Person{
     
@@ -40,7 +41,7 @@ class Student implements Person{
     }
     public function __toString(){
         
-        $stringA= "";
+        $stringA="";
         foreach ($this->courses as $course){
             $stringA.='<br>'.$course;
         }
@@ -48,6 +49,6 @@ class Student implements Person{
         for ($i=0;i<$quanti_corsi;i++){
             echo $courses[$i] . "<br/>";
         }*/
-           return "Nome:  $this->name Età: $this->age Email:  $this->email Corsi: $courses";
+           return "Nome:  $this->name Età: $this->age Email:  $this->email $stringA";
     }
 }
